@@ -33,6 +33,6 @@ export const login = async (commit, username, password) => {
     //sessionStorage.setItem("refreshtoken", JSON.stringify(response.refreshJwt));
     //commit("loginSuccess", response);
     //var dcodedtkn = setToken(response.jwt,response.refreshJwt);
-    return dcodedtkn;
+    return "";
   };
   
