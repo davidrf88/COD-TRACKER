@@ -8,7 +8,19 @@ export default {
     //APIURL:' https://api-dev.optimalcommunity.com/api/v1/'
   },
 
+  router: {
+    middleware: ['auth']
+  },
 
+  auth: {
+    strategies: {
+      auth0: {
+        domain: 'domain.auth0.com',
+        client_id: 'tVUbStYmAut3Vvt7yvV90rw0sA5eIhke'
+      },
+      local:false
+    }
+  },
 
   /*
   ** Nuxt rendering mode
@@ -62,7 +74,14 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
+
+  auth: {
+    // Options
+  },
+
+
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
