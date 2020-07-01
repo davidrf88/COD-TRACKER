@@ -12,15 +12,7 @@ export default {
     middleware: ['auth']
   },
 
-  auth: {
-    strategies: {
-      auth0: {
-        domain: 'domain.auth0.com',
-        client_id: 'tVUbStYmAut3Vvt7yvV90rw0sA5eIhke'
-      },
-      local:false
-    }
-  },
+
 
   /*
   ** Nuxt rendering mode
@@ -78,8 +70,13 @@ export default {
   ],
 
   auth: {
-    // Options
+    strategies: {
+        google: {
+          client_id: '559200602155-0784isbc840orai9fto167frmah08vsu.apps.googleusercontent.com'
+        },
+    }
   },
+
 
 
   /*

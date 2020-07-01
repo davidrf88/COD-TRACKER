@@ -1,6 +1,9 @@
 <template>
 <div>
     <h2>Login Component</h2>
+    <button  v-on:click.prevent="this.$auth.loginWith('google')"  >login</button>
+
+    <a  @click="$auth.loginWith('google')">Sign In</a>
     
 
 </div>
@@ -18,7 +21,7 @@ export default {
 
 mounted: function () {
 
-    this.$auth.loginWith('auth0')
+   // this.$auth.loginWith('auth0')
 
 },
 
@@ -27,18 +30,10 @@ mounted: function () {
        ...mapActions(['user/login']),
 
 
-    greet: function () {
-      this.$store.dispatch('user/login',{ username:this.user, password:this.password }).then(() =>{ 
-
-      });
-      alert();
-    },
-
-        greet2: function () {
-      var va = this.$store.getters['user/GetState']
-      console.log(va);
-      alert(va);
-    },
+    logInF: function () {
+     alert('send Data');
+    
+    }
 
 
   }
